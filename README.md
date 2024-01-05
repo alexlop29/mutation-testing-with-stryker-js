@@ -18,6 +18,7 @@ Contains a coding sample, leveraging Node.js, Typescript, Auth0, and Express.js,
 - [ts-node](https://www.npmjs.com/package/ts-node)
 
 ## Left Off
+
 - Setting up controllers
 - Creating project base
 - Test Stryker
