@@ -17,6 +17,9 @@ Contains a coding sample, leveraging Node.js, Typescript, Auth0, and Express.js,
 - [Jest](https://jestjs.io)
 - [ts-node](https://www.npmjs.com/package/ts-node)
 - typedoc
+- [npm install -g stryker-cli]
+  npm i --save-dev @stryker-mutator/jest-runner
+  npm install --save-dev @stryker-mutator/typescript-checker
 
 ## Left Off
 

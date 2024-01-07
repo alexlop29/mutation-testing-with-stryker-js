@@ -130,3 +130,6 @@ dist
 .pnp.*
 
 lib/*
+
+# stryker temp files
+.stryker-tmp

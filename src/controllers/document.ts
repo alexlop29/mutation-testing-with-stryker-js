@@ -9,18 +9,15 @@ class Document {
   /**
    * Tracks user access to a document
    */
-  permission: boolean = false;
+  permission: boolean | undefined;
 
   constructor(
     public readonly StoreName: string,
     public readonly UserClaim: User["storeName"],
-  ) {
-  }
+  ) {}
   /**
    * Validates the user's native store name and compares it with the request store's documents
    *
-   * @param StoreName the name of the desired store's document
-   * @param UserClaim the token claim attribute containing the active user's store
    * @returns
    * DocumentResponse(200, "OK")
    * DocumentError(400, "Bad Request")
@@ -28,7 +25,7 @@ class Document {
    * DocumentError(500, "Internal Server Error")
    */
   permissions(): DocumentResponse | DocumentError {
-    if (this.StoreName == "" || this.UserClaim == "") {
+    if (this.StoreName == "" || this.UserClaim == "") { // What happens if " "?
       throw new DocumentError(400, "Bad Request");
     } else if (this.StoreName != this.UserClaim) {
       throw new DocumentError(401, "Unauthorized");
