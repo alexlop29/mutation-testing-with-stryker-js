@@ -22,4 +22,15 @@ let kyleAtAwesomeSocks: User = {
   storeName: "awesomesocks",
 };
 
-export { joeAtFreshKicks, kyleAtAwesomeSocks };
+let steveAtUnknown: User = {
+  email: "",
+  email_verified: true,
+  iss: "",
+  sub: "",
+  aud: "",
+  iat: 123,
+  exp: 123,
+  storeName: "",
+};
+
+export { joeAtFreshKicks, kyleAtAwesomeSocks, steveAtUnknown };

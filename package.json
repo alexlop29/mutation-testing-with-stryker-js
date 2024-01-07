@@ -31,6 +31,7 @@
     "prepublish": "npm run build",
     "prettier": "npx prettier . --write",
     "eslint": "eslint src/*",
+    "test": "jest --detectOpenHandles --config src/tests/jest.config.json",
     "typedoc": "npx typedoc src/index.ts"
   },
   "devDependencies": {
