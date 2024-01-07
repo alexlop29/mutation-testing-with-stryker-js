@@ -1,3 +1,2 @@
-export function sayHelloWorld(world: string) {
-  return `Hello ${world}`;
-}
+export { Document } from "./controllers/";
+export { DocumentResponse, DocumentError } from "./helpers";

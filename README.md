@@ -16,6 +16,7 @@ Contains a coding sample, leveraging Node.js, Typescript, Auth0, and Express.js,
 - [ESLint](https://eslint.org)
 - [Jest](https://jestjs.io)
 - [ts-node](https://www.npmjs.com/package/ts-node)
+- typedoc
 
 ## Left Off
 
