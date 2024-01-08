@@ -3,7 +3,7 @@ import { DocumentError } from "../helpers/DocumentError";
 import { User } from "../types/user";
 
 /**
- * An object tracking a single document
+ * Tracks a single document
  */
 class Document {
   /**
@@ -14,7 +14,23 @@ class Document {
   constructor(
     public readonly StoreName: string,
     public readonly UserClaim: User["storeName"],
-  ) {}
+  ) {
+    this.init();
+  }
+
+  /**
+   * Validates the StoreName and UserClaim by checking if the members are undefined, null, blank, or empty
+   *
+   * @returns DocumentError(400, "Bad Request")
+   */
+  init(): void | DocumentError {
+    if (!this.StoreName || !this.UserClaim) {
+      throw new DocumentError(400, "Bad Request");
+    } else if (this.StoreName.trim() === "" || this.UserClaim.trim() === "") {
+      throw new DocumentError(400, "Bad Request");
+    }
+  }
+
   /**
    * Validates the user's native store name and compares it with the request store's documents
    *
@@ -25,9 +41,7 @@ class Document {
    * DocumentError(500, "Internal Server Error")
    */
   permissions(): DocumentResponse | DocumentError {
-    if (this.StoreName == "" || this.UserClaim == "") { // What happens if " "?
-      throw new DocumentError(400, "Bad Request");
-    } else if (this.StoreName != this.UserClaim) {
+    if (this.StoreName != this.UserClaim) {
       throw new DocumentError(401, "Unauthorized");
     } else if (this.StoreName == this.UserClaim) {
       this.permission = true;
