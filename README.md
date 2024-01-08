@@ -1,12 +1,14 @@
-# mutation-testing-with-stryker-js
+# About
 
-Contains a coding sample, leveraging Node.js, Typescript, Auth0, and Express.js, built to run mutation tests with Stryker.js
+> TL; DR: Mutation testing introduces changes to your code, then runs your unit tests against the changed code. It is expected that your unit tests will now fail. If they don't fail, it might indicate your tests do not sufficiently cover the code.
+
+Demonstrates the benefits of mutation testing in identifying gaps in code coverage, remediating code smells, and improving the quality of testing strategies.
 
 ## Getting Started
 
 ### 🔧 Core libraries
 
-- [Node.js(20.10.0)]()
+- [Node.js(20.10.0)](https://nodejs.org/en)
 - [Typescript](https://www.typescriptlang.org)
 - [dotenv](https://www.npmjs.com/package/dotenv)
 
@@ -16,13 +18,6 @@ Contains a coding sample, leveraging Node.js, Typescript, Auth0, and Express.js,
 - [ESLint](https://eslint.org)
 - [Jest](https://jestjs.io)
 - [ts-node](https://www.npmjs.com/package/ts-node)
-- typedoc
-- [npm install -g stryker-cli]
-  npm i --save-dev @stryker-mutator/jest-runner
-  npm install --save-dev @stryker-mutator/typescript-checker
+- [Stryker Mutator](https://stryker-mutator.io)
+- [TypeDoc](https://typedoc.org)
 
-## Left Off
-
-- Setting up controllers
-- Creating project base
-- Test Stryker
